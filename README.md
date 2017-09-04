@@ -1,37 +1,9 @@
-## Welcome to GitHub Pages
+## Python笔记
 
-You can use the [editor on GitHub](https://github.com/billy0920/python_tips/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/billy0920/python_tips/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### 前言
+接触python已经有7年了。
+从一开始偶然在工作间隙看到一篇《可爱的python》开始入手，逐渐领略到python的魅力，并在工作中尽自己所能地推广。
+然而一直没有用正式文字的形式写下学习python的总结，网络上能找到的python相关的中文资料也都比较零散。
+加上最近一段时间的迷茫和求解，总觉得必须留下一些看得见的文字，才算不枉这些年对于编程的不断追求。
+ 
+这些都没关系，总归要有一个开始，就是今天吧。
