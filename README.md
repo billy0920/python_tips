@@ -1,7 +1,7 @@
 ## [Python笔记](https://github.com/billy0920/python_tips/blob/master/content.md)
 
 ### 前言
-接触python已经有7年了。c
+接触python已经有7年了。
 
 
 从一开始偶然在工作间隙看到一篇《可爱的python》开始入手，逐渐领略到python的魅力，并在工作中尽自己所能地推广。
