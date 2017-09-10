@@ -17,11 +17,11 @@ virtualenv是一个非常好用的python虚拟环境工具。为什么要用这�
 python开发是有一个不断引入模块的过程，除了python自带的模块之外，很可能会用到第三方模块，这个时候就需要安装这些模块（后面介绍怎么安装）。但是有的时候，第三方模块之间是有冲突的，如果你一股脑都安装到python解释器环境中，会导致在使用了一堆第三方模块之后，继续引入第三方模块的时候出现冲突。或者是你兴冲冲完成了一个艰巨的任务，却发现需要依赖的第三方模块太多太乱了，无法将这个工程单独打包，只能无奈将整个python解释器打包。说了这么多，你就用virtualenv吧^_^
 网上有一些介绍安装virtualenv的文章，要求先安装easy_install再用easy_install安装virtualenv。这个顺序其实也没错，不过，virtualenv是完全可以独立安装的，并且也可以反过来，安装virtualenv之后，再到虚拟环境中安装easy_install。不为别的，只为了尽可能少“污染”python解释器的原生环境。
 同样，安装virtualenv的方法，请百度之，下载源代码压缩包，解压之后启动一个命令行窗口，cd到对应的解压之后的目录，执行
-```
+```bat
 python setup.py install
 ```
  安装过程输出如下：
-```
+```bat
 Note: without Setuptools installed you will have to use "python -m virtualenv ENV"
 running install
 running build
@@ -37,7 +37,7 @@ ENV是需要创建的环境名。
 ##### 1.3 easy_install安装
 easy_install可以安装到python解释器原生环境中（自行摆渡啊摆渡），也可以安装到virtualenv创建的虚拟环境中。建议安装到虚拟环境中，还是那句话，减少污染，保护环境。
 virtualenv 13.1.0版本中自带了setuptools（easy_install），也就是说，创建虚拟环境时，自动在虚拟环境中安装了easy_install。good！
-```
+```bat
 D:\>python -m virtualenv testenv
 New python executable in testenv\Scripts\python.exe
 Installing setuptools, pip, wheel...done.
@@ -63,4 +63,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 hello, world!
 >>>
 ```
+##### 1.6 提取virtualenv中的python模块
+开发完成之后，打包工程的时候，我们需要将依赖的三方库名称和版本提取出来。
+此时可以使用如下命令:
+```
+(testenv) D:\testenv\Scripts> pip freeze > requirements.txt
+```
+执行之后，就能在当前目录下得到virtualenv中所有依赖的三方模块名称和列表。
+将这个requirements.txt放在打包的工程的根目录中，以后就可以使用pip命令自动安装所有的依赖库，确保移植后的环境中的三方库名称和版本与当前环境一致。
+
 ## [Python笔记](https://github.com/billy0920/python_tips/blob/master/content.md)
