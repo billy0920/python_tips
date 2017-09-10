@@ -1,4 +1,4 @@
-## [Python笔记](https://github.com/billy0920/python_tips/blob/master/README.md)
+## [Python笔记](https://billy0920.github.io/python_tips)
 
 ### 前言
 接触python已经有7年了。
@@ -14,4 +14,4 @@
 
  
 这些都没关系，总归要有一个开始，就是今天吧。
-## [Python笔记](https://github.com/billy0920/python_tips/blob/master/README.md)
+## [Python笔记](https://billy0920.github.io/python_tips)

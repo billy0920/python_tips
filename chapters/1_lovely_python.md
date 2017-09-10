@@ -1,4 +1,4 @@
-## [Python笔记](https://github.com/billy0920/python_tips/blob/master/README.md)
+## [Python笔记](https://billy0920.github.io/python_tips)
 ### Python学习总结——可爱的python
 
 《可爱的python》从一个任务出发，给出一个具体的例子，并且不断的改进之，使读者逐渐领略到python的魅力。
@@ -72,4 +72,4 @@ hello, world!
 执行之后，就能在当前目录下得到virtualenv中所有依赖的三方模块名称和列表。
 将这个requirements.txt放在打包的工程的根目录中，以后就可以使用pip命令自动安装所有的依赖库，确保移植后的环境中的三方库名称和版本与当前环境一致。
 
-## [Python笔记](https://github.com/billy0920/python_tips/blob/master/README.md)
+## [Python笔记](https://billy0920.github.io/python_tips)
