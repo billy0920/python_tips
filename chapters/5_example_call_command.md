@@ -25,7 +25,7 @@ python调用操作系统命令和外部程序有很多方式，但是比较好�
 
 这里详细介绍一下subprocess的Popen函数的使用。该函数的格式为：<code>Popen(args, bufsize=0, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=False, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0)</code>，其中：
 
-args：这是一个list，第一个元素为命令或者外部程序名，第二个参数及后面的参数作为该命令或者程序的参数。例如：["dir", "/S"]，相当于在命令行中执行：
+<b>args</b>：这是一个list，第一个元素为命令或者外部程序名，第二个参数及后面的参数作为该命令或者程序的参数。例如：["dir", "/S"]，相当于在命令行中执行：
 
 ```C:\>dir /S```
 
@@ -52,7 +52,7 @@ ENV["Path"] = ENV["Path"]+";"+"C:/jre/bin"
 
 其他参数这里就不详细介绍了，但是以上介绍的参数已经足够你非常好的运用Popen去调用操作系统命令和外部程序了。
 
-可以看到，作为胶水语言调用操作系统命令和外部程序，对操作系统命令和外部程序是有一定的限制的，那就是：执行命令行执行，能够在命令行返回标准输出和错误输出，并且只能简单地交互（目前只支持一次交互输入。* 错误！其实是可以支持多次交互的，但是不能简单地使用communicate()函数，请参考[《想做就做——python调用外部命令进阶》](https://billy0920.github.io/python_tips)）。
+可以看到，作为胶水语言调用操作系统命令和外部程序，对操作系统命令和外部程序是有一定的限制的，那就是：执行命令行，能够在命令行返回标准输出和错误输出，并且只能简单地交互（目前只支持一次交互输入。 * <b>错误！</b> 其实是可以支持多次交互的，但是不能简单地使用communicate()函数，请参考[《想做就做——python调用外部命令进阶》](https://billy0920.github.io/python_tips)）。
 
 例如操作系统的ftp程序，在调用的时候除了支持参数输入远程主机和用户名密码（用户名密码有的也不支持参数输入），然后还需要输入cd命令、get命令、set命令等以完成一次完整的ftp传输操作，因此并不适合于简单的Popen调用。对于这种情况，只能用其他的支持所有操作参数化的ftp工具来完成。不过也有另外的办法，在[《telnet与ssh命令行工具篇》](https://billy0920.github.io/python_tips)进行介绍。
 
