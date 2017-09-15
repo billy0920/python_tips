@@ -176,6 +176,6 @@ print tn.read_all()
 ```python
 import re
 text = tn.read_all()
-re.sub(r"\[[^\]*m","",text)
+re.sub(r"\[[^m]*m","",text)
 ```
 ## [Python笔记](https://billy0920.github.io/python_tips)
