@@ -54,6 +54,6 @@ ENV["Path"] = ENV["Path"]+";"+"C:/jre/bin"
 
 可以看到，作为胶水语言调用操作系统命令和外部程序，对操作系统命令和外部程序是有一定的限制的，那就是：执行命令行，能够在命令行返回标准输出和错误输出，并且只能简单地交互（目前只支持一次交互输入。 * <b>错误！</b> 其实是可以支持多次交互的，但是不能简单地使用communicate()函数，请参考[《想做就做——python调用外部命令进阶》](https://billy0920.github.io/python_tips)）。
 
-例如操作系统的ftp程序，在调用的时候除了支持参数输入远程主机和用户名密码（用户名密码有的也不支持参数输入），然后还需要输入cd命令、get命令、set命令等以完成一次完整的ftp传输操作，因此并不适合于简单的Popen调用。对于这种情况，只能用其他的支持所有操作参数化的ftp工具来完成。不过也有另外的办法，在[《telnet与ssh命令行工具篇》](https://billy0920.github.io/python_tips/6_example_telnet_ssh)进行介绍。
+例如操作系统的ftp程序，在调用的时候除了支持参数输入远程主机和用户名密码（用户名密码有的也不支持参数输入），然后还需要输入cd命令、get命令、set命令等以完成一次完整的ftp传输操作，因此并不适合于简单的Popen调用。对于这种情况，只能用其他的支持所有操作参数化的ftp工具来完成。不过也有另外的办法，在[《telnet与ssh命令行工具篇》](https://billy0920.github.io/python_tips/chapters/6_example_telnet_ssh)进行介绍。
 
 ## [Python笔记](https://billy0920.github.io/python_tips)
