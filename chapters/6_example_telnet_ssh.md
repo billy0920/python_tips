@@ -12,7 +12,7 @@ python有原生的ssh操作模块，但是使用起来比较复杂。可以通�
 
 python通过调用telnet或者ssh，可以做到对所有的命令行程序的调用，支持程序内的多次交互。
 
-1. 在虚拟环境中安装paramiko。
+#### 1.在虚拟环境中安装paramiko。
 因为虚拟环境中已经缺省安装了easy_install工具，因此安装paramiko貌似非常简单（虚拟环境假设安装在D:/testenv），以下是命令行激活虚拟环境和安装paramiko的过程：
 
 ```bat
@@ -132,7 +132,7 @@ ssh_gss', 'sys', 'transport', 'util']
 
 这个安装过程比较啰嗦，但是至此一次，后面我们安装其他第三方模块的时候，就参照这个过程，不需要多说了。
 
-2. 开始编写命令行工具。
+#### 2.开始编写命令行工具。
 
 如果只支持telnet命令行，是不需要安装paramiko的，但是相信我，你学习了paramiko的安装过程方法，以后安装其他模块时总会用得到的。 
 
@@ -176,7 +176,6 @@ print tn.read_all()
 ```python
 import re
 text = tn.read_all()
-re.sub(r"\[[^\]*\]m","",text)
-
+re.sub(r"\[[^\]*m","",text)
 ```
 ## [Python笔记](https://billy0920.github.io/python_tips)
