@@ -7,3 +7,4 @@
 1. [想做就做——开发一个网络爬虫](https://billy0920.github.io/python_tips/chapters/4_example_net_spider)
 1. [想做就做——python的胶水特性，简单调用操作系统命令和外部程序](https://billy0920.github.io/python_tips/chapters/5_example_call_command)
 1. [想做就做——telnet与ssh命令行工具篇](https://billy0920.github.io/python_tips/chapters/6_example_telnet_ssh)
+1. [想做就做——python调用外部命令进阶](https://billy0920.github.io/python_tips/chapters/7_example_call_command_advanced)
