@@ -25,6 +25,7 @@ args是一个数组，第一个元素为命令，后面的元素为命令的参�
 
 #### subprocess.check_call
     subprocess.check_call(args, *, stdin=None, stdout=None, stderr=None, shell=False)
+
 跟subprocess.call类似，区别在于如果命令返回非0，则抛出CalledProcessError异常。
 
 #### subprocess.check_output
@@ -79,7 +80,7 @@ def example2():
 
 细心的人或许就会发现，这里的shell=False，为什么？这个问题很好，在我所经历的涉及命令调用的项目中，就遇到过很多命令，必须设置shell=True或者shell=False才能够正确执行，否则就根本无从调用，甚至在windows中必须设置shell=False而在linux中必须设置shell=True。当然对于程序员来说，这些都是能做到的，无非就是多几个判断语句而已。
 
-但是这样适配，意味着写出来的代码很难做到平台无关，设置我怀疑在win7中运行正常的代码，在win2008server中可能无法正确运行。
+但是这样适配，意味着写出来的代码很难做到平台无关，甚至我怀疑在win7中运行正常的代码，在win2008server中可能无法正确运行。
 
 经历了无数次糟心之后，我终于找到了一个一次性解决这类问题的终极方案，那就是[《想做就做——调用外部命令终极篇》](https://billy0920.github.io/python_tips)
 
