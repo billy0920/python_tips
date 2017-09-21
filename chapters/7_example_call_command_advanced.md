@@ -82,6 +82,6 @@ def example2():
 
 但是这样适配，意味着写出来的代码很难做到平台无关，甚至我怀疑在win7中运行正常的代码，在win2008server中可能无法正确运行。
 
-经历了无数次糟心之后，我终于找到了一个一次性解决这类问题的终极方案，那就是[《想做就做——调用外部命令终极篇》](https://billy0920.github.io/python_tips)
+经历了无数次糟心之后，我终于找到了一个一次性解决这类问题的终极方案，那就是[《想做就做——调用外部命令终极篇》](https://billy0920.github.io/python_tips/chapters/8_example_call_command_final)
 
 ## [Python笔记](https://billy0920.github.io/python_tips)
