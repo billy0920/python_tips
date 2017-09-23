@@ -20,7 +20,7 @@ def read_input(client, shell, address):
 def send_output(client, shell):
     try:
         while True:
-            ret = shell.stdout.read(65535)
+            ret = shell.stdout.readline()
             client.sendall(ret)
 
     except:
@@ -30,7 +30,7 @@ def send_output(client, shell):
 def send_err(client, shell):
     try:
         while True:
-            ret = shell.stderr.read(65535)
+            ret = shell.stderr.readline()
             client.sendall(ret)
 
     except:
