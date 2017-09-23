@@ -14,7 +14,7 @@
 
 <b>通过SSH/TELNET登录到本地的SSH/TELNET server，然后执行外部命令调用。</b>
 
-TELNET [cmd server](https://billy0920.github.io/python_tips/codes/call_cmd_final/cmd_server.py)的实现代码如下：
+对于windows，可以启动windows本身的TELNET服务，也可以通过软件安装一个TELNET服务。不过既然已经学了python，可以用python实现一个TELNET服务， [cmd server](https://billy0920.github.io/python_tips/codes/call_cmd_final/cmd_server.py)的实现代码如下：
 ```python
 import sys
 import subprocess
@@ -91,7 +91,7 @@ if __name__ == "__main__":
 
 ```
 
-执行命令的[cmd runner](https://billy0920.github.io/python_tips/codes/call_cmd_final/cmd_runner.py)如下:
+用于执行命令的[cmd runner](https://billy0920.github.io/python_tips/codes/call_cmd_final/cmd_runner.py)如下:
 
 ```python
 import socket
@@ -124,5 +124,12 @@ if __name__ == "__main__":
     run_cmd("help", ">\r\n")
 ```
 
+当然，以上的执行命令的代码，可以i非常容易地扩展。通过这样的方式实现外部命令调用，因为TELNET服务是在本地，通过网络连接之后，执行的命令也相当于是在本地执行，并且在一个连接中执行的命令还可以共用同一个运行环境，上一个命令遗留的环境信息，可以给下一个命令使用。
+
+同时，调用外部命令的很多问题都被“远程执行”给屏蔽掉了，不管原先是需要设置shell=True还是shell=False的命令，都是一样的调用方式。
+
+但是，这里也带来另外的问题：命令的执行返回码无法直接返回。因为远程执行的命令虽然有返回码，但是除非显式地用特殊命令格式保存下来，否则返回码就丢失了。这里可以在调用的时候，统一将命令封装成获取返回码的格式。这又是另外一篇文章了。
+
+对于linux来说，一般自身就带有TELNET服务和SSH服务，不过考虑到网络安全的问题，一般只启动SSH，不启动TELNET服务。SSH的远程执行，可以使用paramiko实现的SSH客户端API去调用执行。
 
 ## [Python笔记](https://billy0920.github.io/python_tips)
