@@ -10,3 +10,4 @@
 1. [想做就做——python调用外部命令进阶](https://billy0920.github.io/python_tips/chapters/7_example_call_command_advanced)
 1. [想做就做——python调用外部命令终极篇](https://billy0920.github.io/python_tips/chapters/8_example_call_command_final)
 1. [Python学习总结——偏函数](https://billy0920.github.io/python_tips/chapters/9_partial_function)
+1. [Python学习总结——偏函数](https://billy0920.github.io/python_tips/chapters/10_wrap_function)
