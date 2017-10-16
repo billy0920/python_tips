@@ -41,11 +41,11 @@ if __name__ == "__main__":
 ```python
 import datetime
 def logged_func(func):
-    def new_func(*args, **kwyword_args):
+    def new_func(*args, **keyword_args):
         stime = datetime.datetime.now()
         print "%s"% stime
-        print "call function: %s, with args: %s, and keyword args: %s" % (func.__name__, args, kwyword_args)
-        ret = func(*args, **kwyword_args)
+        print "call function: %s, with args: %s, and keyword args: %s" % (func.__name__, args, keyword_args)
+        ret = func(*args, **keyword_args)
         etime = datetime.datetime.now()
         print "%s"% etime
         print "cost time: %s" % (etime -stime)
@@ -60,7 +60,7 @@ def test(a, b=10):
 if __name__ == "__main__":
     test(5)
 ```
-装饰器返回的函数函的第一个*args是不带缺省值的参数列表，第二个参数**kwyword_args是带缺省值的参数字典。通过这样的修改，这个装饰器可以用于任何参数（不管带不带参数，带不带缺省值参数），并且可以解析参数的名字和参数值等信息，已经具备了记录函数执行日志的基本功能。
+装饰器返回的函数函的第一个*args是不带缺省值的参数列表，第二个参数**keyword_args是带缺省值的参数字典。通过这样的修改，这个装饰器可以用于任何参数（不管带不带参数，带不带缺省值参数），并且可以解析参数的名字和参数值等信息，已经具备了记录函数执行日志的基本功能。
 
 但是这里还有一个问题，带有装饰器的函数已经不是原来的函数了，而是装饰器中定义的new_func，这个new_func跟被装饰的原函数的属性信息不同，在某些需要判断函数属性的情况下，容易导致出错。因此需要再添加一些代码，修改如下：
 ```python
@@ -68,11 +68,11 @@ import datetime
 
 
 def logged_func(func):
-    def new_func(*args, **kwyword_args):
+    def new_func(*args, **keyword_args):
         stime = datetime.datetime.now()
         print "%s"% stime
-        print "call function: %s, with args: %s, and keyword args: %s" % (func.__name__, args, kwyword_args)
-        ret = func(*args, **kwyword_args)
+        print "call function: %s, with args: %s, and keyword args: %s" % (func.__name__, args, keyword_args)
+        ret = func(*args, **keyword_args)
         etime = datetime.datetime.now()
         print "%s"% etime
         print "cost time: %s" % (etime -stime)
